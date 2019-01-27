@@ -29,7 +29,7 @@ function getPageFromPlaylist(nextToken) {
             arrayOfIds.push(video.snippet.resourceId.videoId);
         });
         
-        if(results && results.data && results.data.nextPageToken){
+        if(results.data.nextPageToken){
             getPageFromPlaylist(results.data.nextPageToken);
         } else {
             finalRes.send(arrayOfIds[Math.floor(Math.random()*arrayOfIds.length)]);
