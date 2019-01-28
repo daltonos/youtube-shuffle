@@ -5,13 +5,13 @@ const port = 3000
 const {google} = require('googleapis');
 const youtube = google.youtube('v3');
 
-var arrayOfIds = [];
-var finalRes;
-var playlistId = '';
+let arrayOfIds = [];
+let finalRes;
+let playlistId = [INSERT_PLAYLIST_ID_HERE_FROM_YOUTUBE];
 
 
 function getPageFromPlaylist(nextToken) {
-    var requestObject = {
+    let requestObject = {
       key: [PLACE_YOUR_YOUTUBE_APP_KEY_HERE_FROM_GOOGLE_CONSOLE],
       part: 'id,snippet',
       playlistId: playlistId,
